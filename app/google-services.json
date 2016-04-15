@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "guidme-d2264",
+    "project_number": "241982415721",
+    "name": "GuidMe"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241982415721:android:05ff306b9b9781b8",
+        "client_id": "android:com.example.guideme",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.guideme",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241982415721-3jsqm2ah8ndjqq492g37ma32iokjsnfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.guideme",
+            "certificate_hash": "84A0F2715C46CC2AD842F516F13734E08D329554"
+          }
+        },
+        {
+          "client_id": "241982415721-i9bpbca0c474dfng63qssl29o1icuifk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
