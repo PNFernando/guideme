@@ -25,7 +25,7 @@ import com.squareup.picasso.Picasso;
 
 public class MainActivity extends ActionBarActivity implements
         GoogleApiClient.OnConnectionFailedListener,
-        View.OnClickListener{
+        View.OnClickListener {
 
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -33,6 +33,9 @@ public class MainActivity extends ActionBarActivity implements
     private GoogleApiClient mGoogleApiClient;
     private TextView mStatusTextView;
     private ProgressDialog mProgressDialog;
+
+    private String userName;
+    private String imageUrl;
 
 
     private ImageView imageView;
@@ -42,6 +45,14 @@ public class MainActivity extends ActionBarActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        Intent intent = getIntent();
+//        if (intent!=null){
+//            if (intent.getBooleanExtra("status",false)){
+//                handleSignInResultFromMap(true);
+//            }
+//        }
+
+
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
 
@@ -49,8 +60,8 @@ public class MainActivity extends ActionBarActivity implements
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.disconnect_button).setOnClickListener(this);
+        findViewById(R.id.btn_map).setOnClickListener(this);
 
-         imageView = (ImageView) findViewById(R.id.image);
 
 
 
@@ -65,11 +76,9 @@ public class MainActivity extends ActionBarActivity implements
                 .build();
 
 
-
         SignInButton signInButton = (SignInButton) findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
         signInButton.setScopes(gso.getScopeArray());
-
 
 
         findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
@@ -133,19 +142,8 @@ public class MainActivity extends ActionBarActivity implements
             GoogleSignInAccount acct = result.getSignInAccount();
             mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));
 
-
-          //  Picasso.with(this).load(Uri.parse(acct.getPhotoUrl().toString())).into(imageView);
-
-
-
-          //  imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-
-            Intent intent = new Intent(MainActivity.this, ActivityMap.class);
-
-            intent.putExtra("userName",acct.getDisplayName());
-            intent.putExtra("imageUrl",acct.getPhotoUrl().toString());
-            startActivity(intent);
-
+            userName = acct.getDisplayName();
+            imageUrl = acct.getPhotoUrl().toString();
 
 
             updateUI(true);
@@ -155,6 +153,7 @@ public class MainActivity extends ActionBarActivity implements
         }
     }
     // [END handleSignInResult]
+
 
     // [START signIn]
     private void signIn() {
@@ -218,11 +217,13 @@ public class MainActivity extends ActionBarActivity implements
         if (signedIn) {
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
+            findViewById(R.id.btn_map).setVisibility(View.VISIBLE);
         } else {
             mStatusTextView.setText(R.string.sign_out);
-            imageView.setImageResource(R.drawable.abc_btn_check_material);
+
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
+            findViewById(R.id.btn_map).setVisibility(View.GONE);
         }
     }
 
@@ -238,7 +239,19 @@ public class MainActivity extends ActionBarActivity implements
             case R.id.disconnect_button:
                 revokeAccess();
                 break;
+            case R.id.btn_map:
+                viewMap();
+                break;
         }
+    }
+
+    private void viewMap() {
+        Intent intent = new Intent(MainActivity.this, ActivityMap.class);
+
+        intent.putExtra("userName", userName);
+        intent.putExtra("imageUrl", imageUrl);
+        startActivity(intent);
+
     }
 
 

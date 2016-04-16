@@ -31,7 +31,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-
 import com.directions.route.AbstractRouting;
 import com.directions.route.Route;
 import com.directions.route.RouteException;
@@ -68,6 +67,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import at.markushi.ui.CircleButton;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -88,11 +88,11 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
     private ProgressDialog progressDialog;
     private ArrayList<Polyline> polylines;
     private static final int[] COLORS = new int[]{R.color.primary_dark, R.color.primary, R.color.primary_light, R.color.accent, R.color.primary_dark_material_light};
+    private CircleButton homeButton;
 
-//
+    //
     private static final LatLngBounds BOUNDS_JAMAICA = new LatLngBounds(new LatLng(-57.965341647205726, 144.9987719580531),
             new LatLng(72.77492067739843, -9.998857788741589));
-
 
 
     /**
@@ -103,7 +103,8 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_map);
         ButterKnife.inject(this);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+        getSupportActionBar().hide();
 
         polylines = new ArrayList<>();
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -122,22 +123,22 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
         }
         map = mapFragment.getMap();
 
-      //  map.setMyLocationEnabled(true);
         double[] d = getlocation();
         double lat = d[0];
         double lng = d[1];
 
+        start =new LatLng(lat, lng);
 
         Intent intent = getIntent();
 
-        Bitmap bitmapDescriptor = null;
+        Bitmap userImage = null;
 
 
         String url1 = intent.getStringExtra("imageUrl");
 
         AsyncTask<String, Void, Bitmap> execute = new GetUserImageTask().execute(url1);
         try {
-             bitmapDescriptor = execute.get();
+            userImage = execute.get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -146,26 +147,13 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
 
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(lat, lng))
+                .alpha(0.7f)
+                .flat(true)
                 .title(intent.getStringExtra("userName"))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(bitmapDescriptor, 72, 72))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons(userImage, 72, 72))));
 
 
-
-
-         Button button = (Button) findViewById(R.id.btn_home);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-
-                startActivity(myIntent);
-            }
-        });
-
-
-
-
-                mAdapter = new PlaceAutoCompleteAdapter(this, android.R.layout.simple_list_item_1,
+        mAdapter = new PlaceAutoCompleteAdapter(this, android.R.layout.simple_list_item_1,
                 mGoogleApiClient, BOUNDS_JAMAICA, null);
 
 
@@ -191,7 +179,7 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         locationManager.requestLocationUpdates(
-                LocationManager.NETWORK_PROVIDER, 5000, 0,
+                LocationManager.NETWORK_PROVIDER, 30000, 0,
                 new LocationListener() {
                     @Override
                     public void onLocationChanged(Location location) {
@@ -221,7 +209,7 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
 
 
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                3000, 0, new LocationListener() {
+                30000, 0, new LocationListener() {
                     @Override
                     public void onLocationChanged(Location location) {
                         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
@@ -269,7 +257,7 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
 
                 final PlaceAutoCompleteAdapter.PlaceAutocomplete item = mAdapter.getItem(position);
                 final String placeId = String.valueOf(item.placeId);
-                Log.i(LOG_TAG, "Autocomplete item selected: " + item.description);
+              //  Log.i(LOG_TAG, "Autocomplete item selected: " + item.description);
 
             /*
              Issue a request to the Places Geo Data API to retrieve a Place object with additional
@@ -282,7 +270,7 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
                     public void onResult(PlaceBuffer places) {
                         if (!places.getStatus().isSuccess()) {
                             // Request did not complete successfully
-                            Log.e(LOG_TAG, "Place query did not complete. Error: " + places.getStatus().toString());
+                           // Log.e(LOG_TAG, "Place query did not complete. Error: " + places.getStatus().toString());
                             places.release();
                             return;
                         }
@@ -376,28 +364,36 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
 
     }
 
-
-
-
-
-
-    public Bitmap resizeMapIcons(Bitmap iconName,int width, int height){
-       // Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));
-        Bitmap resizedBitmap = Bitmap.createScaledBitmap(  iconName, width, height, false);
-
+    /**
+     * Re-Size Map Icon
+     *
+     * @param userImage
+     * @param width
+     * @param height
+     * @return
+     */
+    public Bitmap resizeMapIcons(Bitmap userImage, int width, int height) {
+        int px = getResources().getDimensionPixelSize(R.dimen.map_dot_marker_size);
+        // Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(userImage, px, px, false);
+        Canvas canvas = new Canvas(resizedBitmap);
+        Drawable shape = getResources().getDrawable(R.drawable.circle_shape);
+        shape.setBounds(0, 0, resizedBitmap.getWidth(), resizedBitmap.getHeight());
+        shape.draw(canvas);
         return resizedBitmap;
     }
 
 
-
+    /**
+     * Thread For Get User IMage
+     */
     class GetUserImageTask extends AsyncTask<String, Void, Bitmap> {
 
         Drawable drawable;
         Bitmap image = null;
+
         @Override
         protected Bitmap doInBackground(String... strings) {
-
-
             try {
                 URL url = new URL(strings[0]);
                 image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
@@ -405,35 +401,9 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
                 e.printStackTrace();
             }
 
-
-           // final Canvas canvas = new Canvas(image);
-//            drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-//            drawable.draw(canvas);
-
-
-         //   BitmapDescriptor bd = BitmapDescriptorFactory.fromBitmap(image);
-
             return image;
         }
     }
-
-    
-
-
-
-    private BitmapDescriptor getImage(){
-        Bitmap bitmap1 = null;
-        String url = "http://fc03.deviantart.net/fs70/f/2012/008/6/4/png_johnny_deep_by_clauueditions-d4lqghi.png";
-        try {
-            bitmap1 = Picasso.with(this).load(Uri.parse(url)).get();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        BitmapDescriptor bd = BitmapDescriptorFactory.fromBitmap(bitmap1);
-        return bd;
-    }
-
 
     @OnClick(R.id.send)
     public void sendRequest() {
@@ -450,7 +420,7 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
                 if (starting.getText().length() > 0) {
                     starting.setError("Choose location from dropdown.");
                 } else {
-                    Toast.makeText(this, "Please choose a starting point.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "My Location.", Toast.LENGTH_SHORT).show();
                 }
             }
             if (end == null) {
@@ -525,8 +495,8 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
         // Start marker
         MarkerOptions options = new MarkerOptions();
         options.position(start);
-        options.icon(BitmapDescriptorFactory.fromResource(R.drawable.start_blue));
-        map.addMarker(options);
+        //options.icon(BitmapDescriptorFactory.fromResource(R.drawable.start_blue));
+     //   map.addMarker(options);
 
         // End marker
         options = new MarkerOptions();
@@ -556,6 +526,11 @@ public class ActivityMap extends AppCompatActivity implements RoutingListener, G
 
     }
 
+    /**
+     * Get Current Location
+     *
+     * @return
+     */
     public double[] getlocation() {
         LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         List<String> providers = lm.getProviders(true);

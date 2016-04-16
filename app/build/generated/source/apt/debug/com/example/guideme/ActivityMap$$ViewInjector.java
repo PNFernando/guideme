@@ -10,10 +10,10 @@ public class ActivityMap$$ViewInjector<T extends com.example.guideme.ActivityMap
     View view;
     view = finder.findRequiredView(source, 2131492902, "field 'starting'");
     target.starting = finder.castView(view, 2131492902, "field 'starting'");
-    view = finder.findRequiredView(source, 2131493012, "field 'destination'");
-    target.destination = finder.castView(view, 2131493012, "field 'destination'");
-    view = finder.findRequiredView(source, 2131493013, "field 'send' and method 'sendRequest'");
-    target.send = finder.castView(view, 2131493013, "field 'send'");
+    view = finder.findRequiredView(source, 2131493011, "field 'destination'");
+    target.destination = finder.castView(view, 2131493011, "field 'destination'");
+    view = finder.findRequiredView(source, 2131493012, "field 'send' and method 'sendRequest'");
+    target.send = finder.castView(view, 2131493012, "field 'send'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

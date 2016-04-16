@@ -8,29 +8,29 @@ package com.directions.route;
 
 public final class R {
 	public static final class attr {
-		public static final int ambientEnabled = 0x7f01007a;
-		public static final int buttonSize = 0x7f01009c;
-		public static final int cameraBearing = 0x7f01006b;
-		public static final int cameraTargetLat = 0x7f01006c;
-		public static final int cameraTargetLng = 0x7f01006d;
-		public static final int cameraTilt = 0x7f01006e;
-		public static final int cameraZoom = 0x7f01006f;
-		public static final int circleCrop = 0x7f010069;
-		public static final int colorScheme = 0x7f01009d;
-		public static final int imageAspectRatio = 0x7f010068;
-		public static final int imageAspectRatioAdjust = 0x7f010067;
-		public static final int liteMode = 0x7f010070;
-		public static final int mapType = 0x7f01006a;
-		public static final int scopeUris = 0x7f01009e;
-		public static final int uiCompass = 0x7f010071;
-		public static final int uiMapToolbar = 0x7f010079;
-		public static final int uiRotateGestures = 0x7f010072;
-		public static final int uiScrollGestures = 0x7f010073;
-		public static final int uiTiltGestures = 0x7f010074;
-		public static final int uiZoomControls = 0x7f010075;
-		public static final int uiZoomGestures = 0x7f010076;
-		public static final int useViewLifecycle = 0x7f010077;
-		public static final int zOrderOnTop = 0x7f010078;
+		public static final int ambientEnabled = 0x7f01007c;
+		public static final int buttonSize = 0x7f01009e;
+		public static final int cameraBearing = 0x7f01006d;
+		public static final int cameraTargetLat = 0x7f01006e;
+		public static final int cameraTargetLng = 0x7f01006f;
+		public static final int cameraTilt = 0x7f010070;
+		public static final int cameraZoom = 0x7f010071;
+		public static final int circleCrop = 0x7f01006b;
+		public static final int colorScheme = 0x7f01009f;
+		public static final int imageAspectRatio = 0x7f01006a;
+		public static final int imageAspectRatioAdjust = 0x7f010069;
+		public static final int liteMode = 0x7f010072;
+		public static final int mapType = 0x7f01006c;
+		public static final int scopeUris = 0x7f0100a0;
+		public static final int uiCompass = 0x7f010073;
+		public static final int uiMapToolbar = 0x7f01007b;
+		public static final int uiRotateGestures = 0x7f010074;
+		public static final int uiScrollGestures = 0x7f010075;
+		public static final int uiTiltGestures = 0x7f010076;
+		public static final int uiZoomControls = 0x7f010077;
+		public static final int uiZoomGestures = 0x7f010078;
+		public static final int useViewLifecycle = 0x7f010079;
+		public static final int zOrderOnTop = 0x7f01007a;
 	}
 	public static final class color {
 		public static final int common_action_bar_splitter = 0x7f0b001c;
@@ -151,11 +151,11 @@ public final class R {
 		public static final int common_signin_button_text_long = 0x7f06002f;
 	}
 	public static final class styleable {
-		public static final int[] LoadingImageView = { 0x7f010067, 0x7f010068, 0x7f010069 };
+		public static final int[] LoadingImageView = { 0x7f010069, 0x7f01006a, 0x7f01006b };
 		public static final int LoadingImageView_circleCrop = 2;
 		public static final int LoadingImageView_imageAspectRatio = 1;
 		public static final int LoadingImageView_imageAspectRatioAdjust = 0;
-		public static final int[] MapAttrs = { 0x7f01006a, 0x7f01006b, 0x7f01006c, 0x7f01006d, 0x7f01006e, 0x7f01006f, 0x7f010070, 0x7f010071, 0x7f010072, 0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077, 0x7f010078, 0x7f010079, 0x7f01007a };
+		public static final int[] MapAttrs = { 0x7f01006c, 0x7f01006d, 0x7f01006e, 0x7f01006f, 0x7f010070, 0x7f010071, 0x7f010072, 0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077, 0x7f010078, 0x7f010079, 0x7f01007a, 0x7f01007b, 0x7f01007c };
 		public static final int MapAttrs_ambientEnabled = 16;
 		public static final int MapAttrs_cameraBearing = 1;
 		public static final int MapAttrs_cameraTargetLat = 2;
@@ -173,7 +173,7 @@ public final class R {
 		public static final int MapAttrs_uiZoomGestures = 12;
 		public static final int MapAttrs_useViewLifecycle = 13;
 		public static final int MapAttrs_zOrderOnTop = 14;
-		public static final int[] SignInButton = { 0x7f01009c, 0x7f01009d, 0x7f01009e };
+		public static final int[] SignInButton = { 0x7f01009e, 0x7f01009f, 0x7f0100a0 };
 		public static final int SignInButton_buttonSize = 0;
 		public static final int SignInButton_colorScheme = 1;
 		public static final int SignInButton_scopeUris = 2;
