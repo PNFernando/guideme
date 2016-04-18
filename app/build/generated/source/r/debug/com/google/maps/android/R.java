@@ -36,10 +36,10 @@ public final class R {
 		public static final int bubble_shadow = 0x7f020046;
 		public static final int common_full_open_on_phone = 0x7f02004d;
 		public static final int common_ic_googleplayservices = 0x7f020062;
-		public static final int ic_plusone_medium_off_client = 0x7f020091;
-		public static final int ic_plusone_small_off_client = 0x7f020092;
-		public static final int ic_plusone_standard_off_client = 0x7f020093;
-		public static final int ic_plusone_tall_off_client = 0x7f020094;
+		public static final int ic_plusone_medium_off_client = 0x7f020092;
+		public static final int ic_plusone_small_off_client = 0x7f020093;
+		public static final int ic_plusone_standard_off_client = 0x7f020094;
+		public static final int ic_plusone_tall_off_client = 0x7f020095;
 	}
 	public static final class id {
 		public static final int adjust_height = 0x7f0c0035;

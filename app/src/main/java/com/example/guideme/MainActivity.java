@@ -2,7 +2,6 @@ package com.example.guideme;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -20,8 +19,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.squareup.picasso.Picasso;
-
 
 public class MainActivity extends ActionBarActivity implements
         GoogleApiClient.OnConnectionFailedListener,
@@ -61,8 +58,6 @@ public class MainActivity extends ActionBarActivity implements
         findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.disconnect_button).setOnClickListener(this);
         findViewById(R.id.btn_map).setOnClickListener(this);
-
-
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -246,7 +241,7 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     private void viewMap() {
-        Intent intent = new Intent(MainActivity.this, ActivityMap.class);
+        Intent intent = new Intent(MainActivity.this, MapActivity.class);
 
         intent.putExtra("userName", userName);
         intent.putExtra("imageUrl", imageUrl);

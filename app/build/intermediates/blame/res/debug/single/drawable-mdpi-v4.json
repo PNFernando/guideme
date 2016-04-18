@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/gotomap.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-mdpi/gotomap.png"
+    },
+    {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_normal.9.png"
     },
@@ -212,6 +216,10 @@
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png"
     },
     {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/end_green.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-mdpi/end_green.png"
+    },
+    {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_list_longpressed_holo.9.png"
     },
@@ -270,6 +278,10 @@
     {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon_map.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-mdpi/icon_map.png"
     },
     {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_light.png",

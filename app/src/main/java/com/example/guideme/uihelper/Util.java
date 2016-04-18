@@ -3,9 +3,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-/**
- * Created by Joel on 30/06/2015.
- */
+
 public final class Util {
     public static final class Operations {
         private Operations() throws InstantiationException {

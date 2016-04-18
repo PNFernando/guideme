@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_map.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-hdpi/icon_map.png"
+    },
+    {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-hdpi/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
@@ -454,6 +458,10 @@
     {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/cast_ic_notification_on.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-hdpi/cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gotomap.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-hdpi/gotomap.png"
     },
     {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_cast_on_1_light.png",

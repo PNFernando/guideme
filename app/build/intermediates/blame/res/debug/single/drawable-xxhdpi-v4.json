@@ -36,12 +36,12 @@
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-xxhdpi/cast_ic_notification_2.png"
     },
     {
-        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxhdpi/abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxhdpi/abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxhdpi/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_cast_on_light.png",
@@ -72,12 +72,12 @@
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
-        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
-    },
-    {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxhdpi/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
     },
     {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_focused.9.png",

@@ -1,9 +1,5 @@
 package com.example.guideme.adapter;
 
-/**
- * Created by Joel on 28/06/2015.
- */
-
 /*
  * Copyright (C) 2015 Google Inc. All Rights Reserved.
  *

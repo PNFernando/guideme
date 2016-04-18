@@ -5,7 +5,7 @@ import android.view.View;
 import butterknife.ButterKnife.Finder;
 import butterknife.ButterKnife.Injector;
 
-public class ActivityMap$$ViewInjector<T extends com.example.guideme.ActivityMap> implements Injector<T> {
+public class ActivityMap$$ViewInjector<T extends MapActivity> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131492902, "field 'starting'");

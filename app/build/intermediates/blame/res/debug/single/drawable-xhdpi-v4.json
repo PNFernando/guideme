@@ -188,6 +188,10 @@
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_focused.9.png"
     },
     {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/icon_map.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-xhdpi/icon_map.png"
+    },
+    {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cast_ic_notification_on.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-xhdpi/cast_ic_notification_on.png"
     },
@@ -276,8 +280,16 @@
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xhdpi/abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/end_green.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-xhdpi/end_green.png"
+    },
+    {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_cast_on_1_light.png",
         "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-xhdpi/ic_cast_on_1_light.png"
+    },
+    {
+        "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/gotomap.png",
+        "source": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/src/main/res/drawable-xhdpi/gotomap.png"
     },
     {
         "merged": "/home/pramoda-nf/EgreenProject/MyProjects/ResturantManagement/GuideMe/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_play_dark.png",
